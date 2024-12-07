@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = event.target.closest(".champion-card");
       if (card) {
         const championKey = card.dataset.key; // Use dataset for cleaner attribute access
-        const imageUrl = card.dataset.image;
         if (championKey) {
-          showChampionDetailsPopup(championKey, imageUrl);
+          showChampionDetailsPopup(championKey);
         }
       }
     });
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Function to fetch and display champion details in a reusable modal
-async function showChampionDetailsPopup(championKey, imageUrl) {
+async function showChampionDetailsPopup(championKey) {
   try {
     // Fetch champion details
     const details = await getChampionDetails(championKey);
@@ -28,6 +27,9 @@ async function showChampionDetailsPopup(championKey, imageUrl) {
       console.error(`No details found for champion: ${championKey}`);
       return;
     }
+
+    // Construct the high-resolution image URL
+    const highResImageUrl = `https://cdn.communitydragon.org/latest/champion/${championKey}/splash-art`;
 
     // Extract relevant details
     const { name, title, shortBio, tacticalInfo = {}, playstyleInfo = {}, roles = [] } = details;
@@ -51,7 +53,7 @@ async function showChampionDetailsPopup(championKey, imageUrl) {
     // Update modal content dynamically
     modal.innerHTML = `
       <div class="modal-content">
-        <img src="${imageUrl}" alt="${name}">
+        <img src="${highResImageUrl}" alt="${name}">
         <h2>${name}</h2>
         <p><strong>Title:</strong> ${title}</p>
         <p><strong>Short Bio:</strong> ${shortBio}</p>
