@@ -3,40 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wild Rift Fandom</title>
+  <title>League of Legends Wiki</title>
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/media.css">
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Wild Rift Fandom</h1>
-      <ul>
-        <li><a href="#characters">Characters</a></li>
-        <li><a href="#items">Items</a></li>
-        <li><a href="#patch-notes">Patch Notes</a></li>
-      </ul>
-    </nav>
+    <h1>League of Legends Wiki Fandom</h1>
+    <p>A community-driven League of Legends champion database</p>
   </header>
   <main>
-    <section id="characters">
-      <h2>Characters</h2>
-      <div class="card">Character 1</div>
-      <div class="card">Character 2</div>
-    </section>
-    <section id="items">
-      <h2>Items</h2>
-      <div class="card">Item 1</div>
-      <div class="card">Item 2</div>
-    </section>
-    <section id="patch-notes">
-      <h2>Patch Notes</h2>
-      <article>Details about the latest patch.</article>
+    <section id="champions">
+      <h2>Champions</h2>
+      <div id="champion-grid"></div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Wild Rift Fandom</p>
+    <p>&copy; 2024 League of Legends Fandom</p>
   </footer>
-  <script src="scripts/script.js"></script>
+  <script type="module" src="scripts/fetchChampions.js"></script>
 </body>
 </html>
