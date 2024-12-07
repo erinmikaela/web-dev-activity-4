@@ -1,20 +1,20 @@
-// Import required modules
 const express = require("express");
-const path = require("path");
+const axios = require("axios");
 
-// Create an Express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, "public")));
-
-// API endpoint example (optional for dynamic data)
-app.get("/api/data", (req, res) => {
-  res.json({ message: "Welcome to the Wild Rift API!", status: "success" });
+// Proxy route for champion data
+app.get("/api/champions", async (req, res) => {
+  try {
+    const response = await axios.get("https://cdn.communitydragon.org/latest/champion/generic/square");
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error fetching champions:", error);
+    res.status(500).json({ error: "Failed to fetch champions." });
+  }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
+app.use(express.static("public"));
+
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
