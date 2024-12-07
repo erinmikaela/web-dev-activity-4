@@ -35,3 +35,59 @@ main {
   height: 100px;
   border-radius: 50%;
 }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent content overflow */
+  overflow-y: auto; /* Allow scrolling for overflow content */
+  z-index: 1000;
+  padding: 20px; /* Add padding for spacing */
+  text-align: left;
+}
+
+.modal img {
+  width: 100%; /* Ensure the image fits */
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.modal h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.modal p, .modal ul {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.modal button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.modal-content {
+  height: 100%; /* Ensure content stays within the modal */
+  overflow-y: auto; /* Enable scrolling */
+}
