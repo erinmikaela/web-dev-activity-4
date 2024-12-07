@@ -92,7 +92,7 @@ async function displayChampions(championKeys) {
 
       return `
       <div class="champion-card" data-key="${championKey}">
-        <a href="javascript:void(0)">
+        <a href="javascript:void(0)" style="text-decoration: none;"> <!-- Use JavaScript void for popup -->
           <img src="${imageUrl}" alt="${name}" 
                onerror="this.onerror=null; this.src='https://example.com/default-image.jpg';">
           <p>${name}</p>
