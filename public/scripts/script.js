@@ -37,13 +37,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const spanDiv = document.createElement("div");
     spanDiv.classList.add("span-6");
     const textDiv = document.createElement("div");
-    textDiv.classList.add("text-wrapper-6");
+    textDiv.classList.add("text-wrapper-6", "champion-name"); // Add champion-name class
     textDiv.textContent = champion.name.toUpperCase();
     spanDiv.appendChild(textDiv);
     overlapDiv.appendChild(imgDiv);
     overlapDiv.appendChild(spanDiv);
     cardDiv.appendChild(overlapDiv);
     championCardsContainer.appendChild(cardDiv);
+
+    // Add click event to show champion details
+    cardDiv.addEventListener("click", () => {
+      document.getElementById("home").classList.add("hidden");
+      document.getElementById("champions").classList.add("hidden");
+      document.getElementById("champion-details").classList.remove("hidden");
+      loadChampionDetails(champion.name.toLowerCase());
+    });
   });
 
   const championGrid = document.getElementById("champion-grid");
@@ -77,3 +85,8 @@ document.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+function loadChampionDetails(championKey) {
+  // Fetch and display champion details
+  // This function should be implemented to fetch the details and update the #champion-details section
+}

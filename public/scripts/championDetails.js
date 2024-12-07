@@ -1,4 +1,3 @@
-
 import { getChampionDetails } from './fetchChampionDetails.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -6,9 +5,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const championKey = urlParams.get('champion');
 
   if (!championKey) {
-    document.getElementById('champion-details').innerHTML = '<p>Champion not found.</p>';
     return;
   }
+
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("champions").classList.add("hidden");
+  document.getElementById("champion-details").classList.remove("hidden");
 
   const details = await getChampionDetails(championKey);
 

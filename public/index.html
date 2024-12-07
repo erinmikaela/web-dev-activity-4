@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Video loading screen -->
   <div id="loading-screen">
     <video autoplay muted loop id="loading-video">
-      <source src="assets/icons/loading-screen.mp4" type="video/mp4">
+      <source src="assets/loading-screen.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div id="loading-overlay">
@@ -33,6 +34,12 @@
         <li><a href="#characters">Characters</a></li>
         <li><a href="#items">Items</a></li>
         <li><a href="#patch-notes">Patch Notes</a></li>
+        <li>
+          <a href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA..">
+            Map
+            <i class="fas fa-map-marker-alt"></i> 
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -79,12 +86,12 @@
     <footer>
       <p>&copy; 2024 League of Legends Fandom</p>
     </footer>
+  </main>
 
- 
-    <script src="scripts/script.js"></script>
-    <script type="module" src="scripts/fetchChampions.js"></script>
-    <script type="module" src="scripts/championDetailsPopup.js"></script>
-    <!-- Add SweetAlert2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </body>
+  <script src="scripts/script.js"></script>
+  <script type="module" src="scripts/fetchChampions.js"></script>
+  <script type="module" src="scripts/championDetailsPopup.js"></script>
+  <!-- Add SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
