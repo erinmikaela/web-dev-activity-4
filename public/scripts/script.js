@@ -45,6 +45,28 @@ document.addEventListener("DOMContentLoaded", () => {
     cardDiv.appendChild(overlapDiv);
     championCardsContainer.appendChild(cardDiv);
   });
+
+  const championGrid = document.getElementById("champion-grid");
+
+  if (championGrid) {
+    // Assuming you have some logic here to fetch and display champions
+    // For example:
+    fetchChampions().then(champions => {
+      champions.forEach(champion => {
+        const championCard = document.createElement("div");
+        championCard.className = "champion-card";
+        championCard.innerHTML = `
+          <img src="${champion.image}" alt="${champion.name}">
+          <p>${champion.name}</p>
+        `;
+        championGrid.appendChild(championCard);
+      });
+    }).catch(error => {
+      console.error("Error fetching champions:", error);
+    });
+  } else {
+    console.error("Element with ID 'champion-grid' not found.");
+  }
 });
 
 document.addEventListener('scroll', () => {

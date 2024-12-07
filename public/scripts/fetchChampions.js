@@ -2,7 +2,7 @@ import { getChampionDetails } from './fetchChampionDetails.js';
 
 // Constants
 const patch = "latest";
-const maxChampionsToDisplay = 124;
+const maxChampionsToDisplay = 1000; // This constant determines the maximum number of champions to display
 const maxConcurrentRequests = 10; // Control the concurrency for requests
 
 // In-memory cache
@@ -13,40 +13,50 @@ const cache = {
 
 async function loadChampions() {
   const championGrid = document.getElementById("champion-grid");
+  const loadingScreen = document.getElementById("loading-screen");
 
   try {
+    // Show loading screen
+    loadingScreen.style.display = "flex";
+
     // Fetch champions using the proxy route
     const response = await fetch("/api/champions");
     const champions = await response.json();
 
     // Validate images in parallel with controlled concurrency
-    const keys = Object.keys(champions);
-    const validChampions = await filterValidChampions(keys);
+    const championKeys = Object.keys(champions).slice(0, maxChampionsToDisplay); // Limit the number of keys to maxChampionsToDisplay
+    const validChampions = await filterValidChampions(championKeys);
 
     if (!validChampions.length) {
       championGrid.innerHTML = `<p>No champions found or their images could not be loaded. Please try again later.</p>`;
       return;
     }
 
+    // Sort champions alphabetically
+    validChampions.sort((a, b) => a.localeCompare(b));
+
     // Fetch and display champions
     championGrid.innerHTML = await displayChampions(validChampions);
   } catch (error) {
     console.error("Error loading champions:", error);
     championGrid.innerHTML = `<p>Failed to load champions. Please try again later.</p>`;
+  } finally {
+    // Hide loading screen
+    loadingScreen.style.display = "none";
   }
 }
 
-async function filterValidChampions(keys) {
+async function filterValidChampions(championKeys) {
   const validChampions = [];
   let activeRequests = [];
 
-  for (const key of keys) {
-    if (validChampions.length >= maxChampionsToDisplay) break;
+  for (const championKey of championKeys) {
+    if (validChampions.length >= maxChampionsToDisplay) break; // This line ensures that no more than maxChampionsToDisplay champions are processed
 
-    const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${key}/square`;
+    const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${championKey}/square.png`; // Ensure the correct file extension
 
-    const validationPromise = validateImageWithCache(key, imageUrl).then((isValid) => {
-      if (isValid) validChampions.push(key);
+    const validationPromise = validateImageWithCache(championKey, imageUrl).then((isValid) => {
+      if (isValid) validChampions.push(championKey);
     });
 
     activeRequests.push(validationPromise);
@@ -63,25 +73,25 @@ async function filterValidChampions(keys) {
   return validChampions;
 }
 
-async function validateImageWithCache(key, imageUrl) {
-  if (cache.imageValidation[key] !== undefined) {
-    return cache.imageValidation[key];
+async function validateImageWithCache(championKey, imageUrl) {
+  if (cache.imageValidation[championKey] !== undefined) {
+    return cache.imageValidation[championKey];
   }
 
   const isValid = await validateImage(imageUrl);
-  cache.imageValidation[key] = isValid;
+  cache.imageValidation[championKey] = isValid;
   return isValid;
 }
 
-async function displayChampions(keys) {
+async function displayChampions(championKeys) {
   const championCards = await Promise.all(
-    keys.map(async (key) => {
-      const details = await getDetailsWithCache(key);
-      const name = details?.name || key;
-      const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${key}/square`;
+    championKeys.map(async (championKey) => {
+      const details = await getDetailsWithCache(championKey);
+      const name = details?.name || championKey;
+      const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${championKey}/square.png`; // Ensure the correct file extension
 
       return `
-      <div class="champion-card" data-key="${key}">
+      <div class="champion-card" data-key="${championKey}">
         <a href="javascript:void(0)">
           <img src="${imageUrl}" alt="${name}" 
                onerror="this.onerror=null; this.src='https://example.com/default-image.jpg';">
@@ -95,13 +105,13 @@ async function displayChampions(keys) {
   return championCards.join("");
 }
 
-async function getDetailsWithCache(key) {
-  if (cache.championDetails[key]) {
-    return cache.championDetails[key];
+async function getDetailsWithCache(championKey) {
+  if (cache.championDetails[championKey]) {
+    return cache.championDetails[championKey];
   }
 
-  const details = await getChampionDetails(key);
-  cache.championDetails[key] = details;
+  const details = await getChampionDetails(championKey);
+  cache.championDetails[championKey] = details;
   return details;
 }
 
