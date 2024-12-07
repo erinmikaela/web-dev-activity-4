@@ -1,59 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
-  </head>
-  <body>
-    <header>
-      <div class="logo-placeholder">
-        <img src="assets/icons/brand-logo.svg" alt="Logo" />
-      </div>
-      <div class="logo-placeholder">
-        <img src="assets/icons/1.png" alt="Wildrift Fandom" />
-      </div>
-      <nav class="nav-bar">
-        <a href="#home">Home</a>
-        <a href="#champions">Champions</a>
-        <a href="#about">About</a>
-      </nav>
-    </header>
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Wildrift Fandom</h1>
-        <p>
-          Welcome to the Wildrift Fandom, where you can find all the information
-          about the champions in the game.
-        </p>
-        <button class="btn" id="champions">View Champions</button>
-        <div class="DivSelector">
-          <div class="SpanSelected">
-            <div class="AllRoles">All Roles</div>
-          </div>
-          <div class="Span">
-            <img class="Img" src="assets/icons/baron.png" />
-            <div class="Baron">Baron</div>
-          </div>
-          <div class="Span">
-            <img class="Img" src="assets/icons/jungle.png" />
-            <div class="Jungle">Jungle</div>
-          </div>
-          <div class="Span">
-            <img class="Img" src="assets/icons/mid.png" />
-            <div class="Mid">Mid</div>
-          </div>
-          <div class="Span">
-            <img class="Img" src="assets/icons/duo.png" />
-            <div class="Duo">Duo</div>
-          </div>
-          <div class="Span">
-            <img class="Img" src="assets/icons/support.png" />
-            <div class="Support">Support</div>
-          </div>
-        </div>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Legends Wiki</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- Add SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+  <header>
+    <h1>League of Legends Wiki Fandom</h1>
+    <p>A community-driven League of Legends champion database</p>
+  </header>
+  <main>
+    <section id="champions">
+      <h2>Champions</h2>
+      <div id="champion-grid"></div>
     </section>
-    <script src="scripts/script.js"></script>
-  </body>
+  </main>
+  <footer>
+    <p>&copy; 2024 League of Legends Fandom</p>
+  </footer>
+  <script type="module" src="scripts/fetchChampions.js"></script>
+  <!-- Add SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="scripts/championDetailsPopup.js"></script>
+</body>
 </html>
