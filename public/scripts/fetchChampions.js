@@ -81,7 +81,7 @@ async function displayChampions(keys) {
       const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${key}/square`;
 
       return `
-      <div class="champion-card" data-key="${key}" data-image="${imageUrl}">
+      <div class="champion-card" data-key="${key}">
         <a href="javascript:void(0)">
           <img src="${imageUrl}" alt="${name}" 
                onerror="this.onerror=null; this.src='https://example.com/default-image.jpg';">
