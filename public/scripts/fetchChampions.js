@@ -2,7 +2,7 @@ import { getChampionDetails } from './fetchChampionDetails.js';
 
 // Constants
 const patch = "latest";
-const maxChampionsToDisplay = 124;
+const maxChampionsToDisplay = 169;
 const maxConcurrentRequests = 10; // Control the concurrency for requests
 
 // In-memory cache
