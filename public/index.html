@@ -5,26 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>League of Legends Wiki</title>
   <link rel="stylesheet" href="styles/style.css">
-  <!-- Add SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="styles/media.css">
 </head>
 <body>
   <header>
-    <h1>League of Legends Wiki Fandom</h1>
-    <p>A community-driven League of Legends champion database</p>
+    <nav>
+      <h1>Wild Rift Fandom</h1>
+      <ul>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#items">Items</a></li>
+        <li><a href="#patch-notes">Patch Notes</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Wildrift Fandom</h1>
+        <p>
+          Welcome to the Wildrift Fandom, where you can find all the information
+          about the champions in the game.
+        </p>
+        <button class="btn" id="champions">View Champions</button>
+        <div class="DivSelector">
+          <div class="SpanSelected">
+            <div class="AllRoles">All Roles</div>
+          </div>
+          <div class="Span">
+            <img class="Img" src="assets/icons/baron.png" />
+            <div class="Baron">Baron</div>
+          </div>
+          <div class="Span">
+            <img class="Img" src="assets/icons/jungle.png" />
+            <div class="Jungle">Jungle</div>
+          </div>
+          <div class="Span">
+            <img class="Img" src="assets/icons/mid.png" />
+            <div class="Mid">Mid</div>
+          </div>
+          <div class="Span">
+            <img class="Img" src="assets/icons/duo.png" />
+            <div class="Duo">Duo</div>
+          </div>
+          <div class="Span">
+            <img class="Img" src="assets/icons/support.png" />
+            <div class="Support">Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="champions">
       <h2>Champions</h2>
       <div id="champion-grid"></div>
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 League of Legends Fandom</p>
-  </footer>
-  <script type="module" src="scripts/fetchChampions.js"></script>
-  <!-- Add SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="module" src="scripts/championDetailsPopup.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2024 League of Legends Fandom</p>
+    </footer>
+
+ 
+    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/fetchChampions.js"></script>
+    <!-- Add SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="scripts/championDetailsPopup.js"></script>
+  </body>
 </html>
