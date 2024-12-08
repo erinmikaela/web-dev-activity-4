@@ -1,4 +1,4 @@
-# Wild Rift Fandom Website
+# league of legends Fandom Website
 
 ## Overview
 A fandom site built with the Fandom Design System and custom components.
