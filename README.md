@@ -15,7 +15,22 @@ Welcome to the **League of Legends Universe**! Explore the world of Runeterra an
 ## Project Structure
 Here is an overview of the project's file and folder structure:
 
-League-of-Legends-Universe/ ├── node_modules/ # Node.js modules for project dependencies ├── public/ # Public folder for client-side assets │ ├── scripts/ # JavaScript files for dynamic behavior │ │ ├── championDetailsHandler.js # Handles champion details │ │ ├── fetchChampionDetails.js # Fetch specific champion data │ │ ├── fetchChampions.js # Fetch all champions data │ │ ├── pagination.js # Pagination logic for champions │ ├── styles/ # CSS files for styling │ ├── champion-details.html # Page for champion details │ ├── index.html # Homepage of the website ├── package-lock.json # Dependency tree lock file ├── package.json # Project metadata and dependencies ├── README.md # Project documentation ├── server.js # Entry point for Node.js server
+League-of-Legends-Universe/  
+├── **node_modules/**  
+│   └── Node.js modules for project dependencies  
+├── **public/**  
+│   ├── **scripts/**  
+│   │   ├── championDetailsHandler.js  # Handles champion details  
+│   │   ├── fetchChampionDetails.js    # Fetch specific champion data  
+│   │   ├── fetchChampions.js          # Fetch all champions data  
+│   │   └── pagination.js              # Pagination logic for champions  
+│   ├── **styles/**                    # CSS files for styling  
+│   ├── champion-details.html          # Page for champion details  
+│   └── index.html                     # Homepage of the website  
+├── **package-lock.json**              # Dependency tree lock file  
+├── **package.json**                   # Project metadata and dependencies  
+├── **README.md**                      # Project documentation  
+└── **server.js**                      # Entry point for Node.js server  
 
 ---
 
