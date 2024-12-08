@@ -22,10 +22,10 @@ async function loadChampions() {
 
   try {
     showLoadingScreen();
-    // Fetch champions using the proxy route
     const response = await fetch("/api/champions");
+    if (!response.ok) throw new Error("Failed to fetch champions");
     const champions = await response.json();
-
+    console.log("Champions loaded:", champions);
     // Validate images concurrently with controlled concurrency
     validChampions = await filterValidChampions(Object.keys(champions));
 
