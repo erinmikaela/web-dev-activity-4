@@ -1,9 +1,10 @@
 import { getChampionDetails } from './fetchChampionDetails.js';
+import { setupPagination, calculatePaginationData } from './pagination.js';
 
 // Constants
 const patch = "latest";
-const maxChampionsToDisplay = 124;
-const maxConcurrentRequests = 10; // Control the concurrency for requests
+const maxChampionsPerPage = 30; // Number of champions to display per page
+const maxConcurrentRequests = 5; // Control the concurrency for requests
 
 // In-memory cache
 const cache = {
@@ -11,25 +12,35 @@ const cache = {
   imageValidation: {}, // Cache for image validation results
 };
 
+let currentPage = 1; // Current page for pagination
+let totalPages = 1; // Total number of pages
+let validChampions = []; // Valid champions after image validation
+
 async function loadChampions() {
   const championGrid = document.getElementById("champion-grid");
+  const paginationControls = document.getElementById("pagination-controls");
 
   try {
     // Fetch champions using the proxy route
     const response = await fetch("/api/champions");
     const champions = await response.json();
 
-    // Validate images in parallel with controlled concurrency
-    const keys = Object.keys(champions);
-    const validChampions = await filterValidChampions(keys);
+    // Validate images concurrently with controlled concurrency
+    validChampions = await filterValidChampions(Object.keys(champions));
 
     if (!validChampions.length) {
       championGrid.innerHTML = `<p>No champions found or their images could not be loaded. Please try again later.</p>`;
       return;
     }
 
-    // Fetch and display champions
-    championGrid.innerHTML = await displayChampions(validChampions);
+    // Calculate total pages
+    totalPages = Math.ceil(validChampions.length / maxChampionsPerPage);
+
+    // Display champions for the current page
+    displayCurrentPage();
+
+    // Setup pagination controls
+    setupPaginationControls(paginationControls);
   } catch (error) {
     console.error("Error loading champions:", error);
     championGrid.innerHTML = `<p>Failed to load champions. Please try again later.</p>`;
@@ -38,28 +49,14 @@ async function loadChampions() {
 
 async function filterValidChampions(keys) {
   const validChampions = [];
-  let activeRequests = [];
-
-  for (const key of keys) {
-    if (validChampions.length >= maxChampionsToDisplay) break;
-
+  const promises = keys.map(async (key) => {
     const imageUrl = `https://cdn.communitydragon.org/${patch}/champion/${key}/square`;
+    const isValid = await validateImageWithCache(key, imageUrl);
+    if (isValid) validChampions.push(key);
+  });
 
-    const validationPromise = validateImageWithCache(key, imageUrl).then((isValid) => {
-      if (isValid) validChampions.push(key);
-    });
-
-    activeRequests.push(validationPromise);
-
-    // Control the number of concurrent requests
-    if (activeRequests.length >= maxConcurrentRequests) {
-      await Promise.race(activeRequests);
-      activeRequests = activeRequests.filter((req) => !req.isSettled);
-    }
-  }
-
-  // Wait for remaining requests
-  await Promise.all(activeRequests);
+  // Use Promise.all to fetch all data concurrently
+  await Promise.all(promises);
   return validChampions;
 }
 
@@ -71,6 +68,15 @@ async function validateImageWithCache(key, imageUrl) {
   const isValid = await validateImage(imageUrl);
   cache.imageValidation[key] = isValid;
   return isValid;
+}
+
+async function displayCurrentPage() {
+  const championGrid = document.getElementById("champion-grid");
+  const { startIndex, endIndex } = calculatePaginationData(validChampions.length, maxChampionsPerPage, currentPage);
+  const championsToDisplay = validChampions.slice(startIndex, endIndex);
+
+  // Fetch and display champions
+  championGrid.innerHTML = await displayChampions(championsToDisplay);
 }
 
 async function displayChampions(keys) {
@@ -100,9 +106,14 @@ async function getDetailsWithCache(key) {
     return cache.championDetails[key];
   }
 
-  const details = await getChampionDetails(key);
-  cache.championDetails[key] = details;
-  return details;
+  try {
+    const details = await getChampionDetails(key);
+    cache.championDetails[key] = details;
+    return details;
+  } catch (error) {
+    console.error(`Error fetching details for champion ${key}:`, error);
+    return null;
+  }
 }
 
 async function validateImage(imageUrl) {
@@ -112,6 +123,36 @@ async function validateImage(imageUrl) {
   } catch {
     return false;
   }
+}
+
+function setupPaginationControls(container) {
+  container.innerHTML = ""; // Clear existing controls
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.classList.add("pagination-button");
+    if (i === currentPage) button.classList.add("active");
+
+    button.addEventListener("click", async () => {
+      currentPage = i;
+      await displayCurrentPage();
+      updateActiveButton(container);
+    });
+
+    container.appendChild(button);
+  }
+}
+
+function updateActiveButton(container) {
+  const buttons = container.querySelectorAll(".pagination-button");
+  buttons.forEach((button, index) => {
+    if (index + 1 === currentPage) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
 }
 
 // Initialize champions on page load

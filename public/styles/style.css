@@ -91,3 +91,30 @@ main {
   height: 100%; /* Ensure content stays within the modal */
   overflow-y: auto; /* Enable scrolling */
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
