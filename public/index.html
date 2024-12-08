@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>League of Legends Universe</title>
 		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/media.css" />
 		<!-- Add SweetAlert2 CSS -->
 		<link
 			rel="stylesheet"
@@ -41,7 +42,6 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="test.html">Champions</a></li>
 					<li><a href="how-to-play.html">How to Play</a></li>
 					<li>
 						<a
@@ -63,38 +63,12 @@
 						Welcome to the League of Legends Universe! Explore the world of
 						Runeterra and its champions.
 					</p>
-					<div class="DivSelector">
-						<div class="SpanSelected">
-							<div class="AllRoles" id="all-roles">All Roles</div>
-						</div>
-						<div class="Span">
-							<img class="Img" src="assets/icons/baron.png" />
-							<div class="Baron" id="baron-role">Baron</div>
-						</div>
-						<div class="Span">
-							<img class="Img" src="assets/icons/jungle.png" />
-							<div class="Jungle" id="jungle-role">Jungle</div>
-						</div>
-						<div class="Span">
-							<img class="Img" src="assets/icons/mid.png" />
-							<div class="Mid" id="mid-role">Mid</div>
-						</div>
-						<div class="Span">
-							<img class="Img" src="assets/icons/duo.png" />
-							<div class="Duo" id="duo-role">Duo</div>
-						</div>
-						<div class="Span">
-							<img class="Img" src="assets/icons/support.png" />
-							<div class="Support" id="support-role">Support</div>
-						</div>
-					</div>
 				</div>
 			</section>
-      <!--Champions Section-->
+     <!--Champions Section-->
 			<section id="champions">
 				<h2>Champions</h2>
 				<div id="champion-grid"></div>
-				<!-- Pagination controls -->
 				<div id="pagination-controls" class="pagination"></div>
 			</section>
 		</main>
@@ -104,6 +78,7 @@
 		</footer>
     <!--Scripts-->
     <script src="scripts/loadingScreen.js"></script>
+	<script src="scripts/mapElementInteractions.js"></script>
 		<script type="module" src="scripts/fetchChampions.js"></script>
 		<script type="module" src="scripts/championDetailsHandler.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

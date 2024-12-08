@@ -86,15 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-document.addEventListener("scroll", () => {
-	const header = document.querySelector("header");
-	if (window.scrollY > 0) {
-		header.classList.add("scrolled");
-	} else {
-		header.classList.remove("scrolled");
-	}
-});
-
 function loadChampionDetails(championKey) {
 	// Fetch and display champion details
 	// This function should be implemented to fetch the details and update the #champion-details section

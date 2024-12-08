@@ -5,14 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Champion Details</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/media.css">
+  <!-- Add Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <!-- Add Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Champion Details</h1>
+    <div class="logo-placeholder">
+      <img src="assets/icons/brand-logo.svg" alt="Brand Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-to-play.html">How to Play</a></li>
+        <li>
+          <a href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA..">
+            Runeterra Map
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main id="champion-details-container">
-    <p>Loading champion details...</p>
+    <div class="champion-image" id="champion-image"></div>
+    <div class="champion-content">
+      <div class="champion-header">
+        <h2 class="champion-title" id="champion-title">Champion Title</h2>
+        <h1 class="champion-name" id="champion-name">Champion Name</h1>
+        <p class="champion-description" id="champion-shortbio">Champion lore</p>
+      </div>
+      <div class="meta-container">
+        <div class="meta-box">
+          <div class="icon-wrapper" id="role-icons">
+            <!-- Role icons will be dynamically inserted here -->
+          </div>
+          <div class="meta-description">
+            <span class="meta-title">Role</span>
+            <span class="meta-value" id="champion-roles">Roles</span>
+          </div>
+        </div>
+        <div class="meta-box">
+          <div class="icon-wrapper">
+            <div class="difficulty-icon"></div>
+          </div>
+          <div class="meta-description">
+            <span class="meta-title">Difficulty</span>
+            <span class="meta-value" id="champion-difficulty">Difficulty</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+  <!--Footer-->
+  <footer>
+    <p>&copy; 2024 League of Legends Universe. All Rights Reserved.</p>
+  </footer>
+  <!--Scripts-->
   <script type="module" src="scripts/championDetailsHandler.js"></script>
+  <script src="scripts/mapElementInteractions.js"></script>
 </body>
 </html>

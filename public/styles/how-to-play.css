@@ -6,39 +6,37 @@
 	/*border: red 1px solid;*/
 }
 
+/*Header*/
 header {
 	width: 100%;
-	height: 100px;
-	padding: 8px 4px;
+	height: 70px; /* Adjusted height */
+	padding-bottom: 4px;
 	background: linear-gradient(0deg, #4c9ed7 0%, #034a7c 100%);
 	justify-content: flex-start;
 	align-items: center;
 	display: inline-flex;
-	z-index: 1000;
-	position: sticky;
-	top: 0;
-	transition: background-color 0.4s ease-in-out;
+	background-attachment: fixed;
 }
 
 header a {
 	color: white;
 	text-decoration: none;
-	padding: 8px 16px;
+	padding: 0.25rem 0.5rem; /* Adjusted padding to 4px 8px equivalent */
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1rem; /* Adjusted font size to 16px equivalent */
 	transition: color 0.3s, background-color 0.3s;
 }
 
 header a img {
-	width: 16px;
-	height: 16px;
-	margin-right: 5px;
+	width: 1rem; /* Adjusted width to 16px equivalent */
+	height: 1rem; /* Adjusted height to 16px equivalent */
+	margin-right: 0.3125rem; /* Adjusted margin to 5px equivalent */
 	vertical-align: middle;
 	transition: transform 0.3s;
 }
 
 header a i {
-	margin-right: 5px;
+	margin-right: 0.3125rem; /* Adjusted margin to 5px equivalent */
 	vertical-align: middle;
 	transition: transform 0.3s;
 }
@@ -53,7 +51,7 @@ header a:hover img {
 
 header a:hover {
 	color: #4c9ed7;
-	border-bottom: 2px solid #4c9ed7;
+	border-bottom: 0.125rem solid #4c9ed7; /* Adjusted border to 2px equivalent */
 }
 
 header.scrolled {
@@ -70,23 +68,35 @@ header nav ul {
 }
 
 header nav ul li {
-	margin-right: 20px;
+	margin-right: 1.25rem; /* Adjusted margin to 20px equivalent */
 }
 
 header nav ul li:last-child {
 	margin-right: 0;
 }
 
+header .logo-placeholder {
+	width: 3.75rem; /* Adjusted size to 60px equivalent */
+	height: 3.75rem; /* Adjusted size to 60px equivalent */
+	margin-right: 0.625rem; /* Adjusted margin to 10px equivalent */
+}
+
+header .logo-placeholder img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
 .logo-placeholder {
-	width: 100px;
-	height: 100px;
+	width: 6.25rem; /* Adjusted size to 100px equivalent */
+	height: 6.25rem; /* Adjusted size to 100px equivalent */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
-	padding-left: 10px;
+	font-size: 0.875rem; /* Adjusted font size to 14px equivalent */
+	padding-left: 0.625rem; /* Adjusted padding to 10px equivalent */
 	color: #4c9ed7;
-	margin-right: 10px;
+	margin-right: 0.625rem; /* Adjusted margin to 10px equivalent */
 	overflow: hidden;
 	border-radius: 50%;
 }
@@ -101,7 +111,7 @@ header .logo-placeholder {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 10px;
+	margin-right: 0.625rem; /* Adjusted margin to 10px equivalent */
 }
 
 header .logo-placeholder img {
@@ -113,13 +123,12 @@ header .logo-placeholder img {
 /* General container styling */
 .section-container {
 	position: relative;
-	padding: 40px 20px; /* Add more padding to the top */
 	background-color: transparent; /* Make background transparent */
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    height: 70vh;
+	height: 70vh;
 }
 
 .dark-theme {
@@ -127,13 +136,13 @@ header .logo-placeholder img {
 	background: #0A1428;
 	padding-left: 0;
 	width: 100%;
-	max-width: 1278px;
+	max-width: 79.875rem; /* Adjusted max width to 1278px equivalent */
 	height: 100vh;
 	background: #0A1428;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+}
 
 /* Header container styling */
 .header-container {
@@ -146,9 +155,9 @@ header .logo-placeholder img {
 
 /* Text styles */
 .header-title {
-    max-width: 600px;
-	font-size: 20px; /* Make the text smaller */
-	margin-bottom: 20px;
+	max-width: 37.5rem; /* Adjusted max width to 600px equivalent */
+	font-size: 1.25rem; /* Adjusted font size to 20px equivalent */
+	margin-bottom: 1.25rem; /* Adjusted margin to 20px equivalent */
 	color: #0a1428;
 	font-family: Inter, sans-serif;
 	font-weight: 500;
@@ -157,9 +166,9 @@ header .logo-placeholder img {
 }
 
 .header-subtitle {
-    max-width: 800px;
+	max-width: 50rem; /* Adjusted max width to 800px equivalent */
 	font-size: 4rem;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem; /* Adjusted margin to 10px equivalent */
 	color: #0a1428;
 	font-family: Inter, sans-serif;
 	font-style: italic;
@@ -170,17 +179,17 @@ header .logo-placeholder img {
 }
 
 .header-subtitle-1 {
-    font-size:3.6rem;
-    margin-bottom: 20px;
-    font-style: italic;
-    color: #fff;
-    text-align: center; /* Center the text */
+	font-size: 3.6rem;
+	margin-bottom: 1.25rem; /* Adjusted margin to 20px equivalent */
+	font-style: italic;
+	color: #fff;
+	text-align: center; /* Center the text */
 }
 
 .header-description {
-	max-width: 800px;
-	font-size: 18px;
-	margin-bottom: 20px;
+	max-width: 50rem; /* Adjusted max width to 800px equivalent */
+	font-size: 1.125rem; /* Adjusted font size to 18px equivalent */
+	margin-bottom: 1.25rem; /* Adjusted margin to 20px equivalent */
 	color: #0a1428;
 	font-family: Inter, sans-serif;
 	font-weight: 400;
@@ -189,11 +198,11 @@ header .logo-placeholder img {
 }
 
 .header-description-1 {
-    margin-bottom: 20px;
-    max-width: 750px;
-    font-size: 18px;
-    color: #fff;
-    text-align: center; /* Center the text */
+	margin-bottom: 1.25rem; /* Adjusted margin to 20px equivalent */
+	max-width: 46.875rem; /* Adjusted max width to 750px equivalent */
+	font-size: 1.125rem; /* Adjusted font size to 18px equivalent */
+	color: #fff;
+	text-align: center; /* Center the text */
 }
 
 .next-slide {
@@ -207,31 +216,31 @@ header .logo-placeholder img {
 }
 
 .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  text-align: center;
-  z-index: -1; 
-  filter: brightness(50%); /* Add shadow effect */
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	text-align: center;
+	z-index: -1;
+	filter: brightness(50%); /* Add shadow effect */
+	pointer-events: none;
 }
 
 .video-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-align: center;
-  padding: 0 0;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	padding: 0;
 }
 
 footer {
 	text-align: center;
-	padding: 20px;
+	padding: 1.25rem; /* Adjusted padding to 20px equivalent */
 	background-color: #034a7c;
 	color: white;
 }
@@ -239,141 +248,141 @@ footer {
 /* Content container */
 .content-container {
 	width: 100%;
-	max-width: 1182px;
+	max-width: 73.875rem; /* Adjusted max width to 1182px equivalent */
 	height: 60vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	padding-left: 0;
 	align-items: center;
-	gap: 24px;
-    align-items: center; /* Center the items horizontally */
-    text-align: center; /* Center the text */
-  }
-  
-  /* Text container */
-  .text-container {
+	gap: 1.5rem; /* Adjusted gap to 24px equivalent */
+	align-items: center; /* Center the items horizontally */
+	text-align: center; /* Center the text */
+}
+
+/* Text container */
+.text-container {
 	text-align: center;
-  }
-  
-  .section-title {
-	font-size: 64px;
+}
+
+.section-title {
+	font-size: 4rem; /* Adjusted font size to 64px equivalent */
 	font-family: Inter, sans-serif;
 	font-style: italic;
 	font-weight: 700;
 	text-transform: uppercase;
-	line-height: 72px;
+	line-height: 4.5rem; /* Adjusted line height to 72px equivalent */
 	margin: 0;
-  }
-  
-  .section-description {
-	font-size: 18px;
+}
+
+.section-description {
+	font-size: 1.125rem; /* Adjusted font size to 18px equivalent */
 	font-family: Inter, sans-serif;
 	font-weight: 400;
-	line-height: 26px;
-	margin: 16px 0 0;
-	max-width: 575px;
+	line-height: 1.625rem; /* Adjusted line height to 26px equivalent */
+	margin: 1rem 0 0; /* Adjusted margin to 16px 0 0 equivalent */
+	max-width: 35.9375rem; /* Adjusted max width to 575px equivalent */
 	text-align: center;
-  }
-  
-  /* Icon tab */
-  .icon-tab {
+}
+
+/* Icon tab */
+.icon-tab {
 	display: flex;
 	justify-content: space-around;
-	margin-top: 15px;
-	gap:10px;
-    justify-content: center; /* Center the labels horizontally */
-    margin-bottom: 5px; /* Add margin for spacing */
-  }
-  
-  .icon-tab-label {
+	margin-top: 0.9375rem; /* Adjusted margin to 15px equivalent */
+	gap: 0.625rem; /* Adjusted gap to 10px equivalent */
+	justify-content: center; /* Center the labels horizontally */
+	margin-bottom: 0.3125rem; /* Adjusted margin to 5px equivalent */
+}
+
+.icon-tab-label {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    margin: 0 5px; /* Add margin between labels */
-    transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
-    cursor: pointer; /* Add cursor pointer */
-  }
-  
-  .icon-tab-label img {
-    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
-  }
-  
-  .icon-tab-label:hover {
-    transform: scale(1.1); /* Scale up the label on hover */
-    color: #4c9ed7; /* Change text color on hover */
-  }
-  
-  .icon-tab-label:hover img {
-    transform: scale(1.1); /* Scale up the image on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
-  }
-  
-  .label-text {
-	font-size: 14px;
-	padding-top: 10px;
+	margin: 0 0.3125rem; /* Adjusted margin to 5px equivalent */
+	transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
+	cursor: pointer; /* Add cursor pointer */
+}
+
+.icon-tab-label img {
+	transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.icon-tab-label:hover {
+	transform: scale(1.1); /* Scale up the label on hover */
+	color: #4c9ed7; /* Change text color on hover */
+}
+
+.icon-tab-label:hover img {
+	transform: scale(1.1); /* Scale up the image on hover */
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+.label-text {
+	font-size: 0.875rem; /* Adjusted font size to 14px equivalent */
+	padding-top: 0.625rem; /* Adjusted padding to 10px equivalent */
 	font-family: Inter, sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
-	line-height: 22px;
-  }
-  
-  /* Nexus visual */
-  .nexus-visual {
-	max-width: 550px;
+	line-height: 1.375rem; /* Adjusted line height to 22px equivalent */
+}
+
+/* Nexus visual */
+.nexus-visual {
+	max-width: 34.375rem; /* Adjusted max width to 550px equivalent */
 	width: 100%;
 	height: 100%;
-	margin-top: -80px;
-  }
+	margin-top: -5rem; /* Adjusted margin to -80px equivalent */
+}
 
-  .nexus-container {
+.nexus-container {
 	height: 100%;
-  }
-  
-  /* Media content */
-  .media-content {
+}
+
+/* Media content */
+.media-content {
 	text-align: center;
-	max-width: 575px;
-    text-align: center; /* Center the text */
-    margin-top: 20px; /* Add margin for spacing */
-  }
-  
-  .media-title {
-	font-size: 24px;
+	max-width: 35.9375rem; /* Adjusted max width to 575px equivalent */
+	text-align: center; /* Center the text */
+	margin-top: 1.25rem; /* Adjusted margin to 20px equivalent */
+}
+
+.media-title {
+	font-size: 1.5rem; /* Adjusted font size to 24px equivalent */
 	font-family: Inter, sans-serif;
 	font-style: italic;
 	font-weight: 700;
 	text-transform: uppercase;
-	line-height: 32px;
-	margin: 0 0 8px;
-	min-height: 32px; /* Ensure consistent height */
-  }
-  
-  .media-description {
-	font-size: 18px;
+	line-height: 2rem; /* Adjusted line height to 32px equivalent */
+	margin: 0 0 0.5rem; /* Adjusted margin to 0 0 8px equivalent */
+	min-height: 2rem; /* Ensure consistent height */
+}
+
+.media-description {
+	font-size: 1.125rem; /* Adjusted font size to 18px equivalent */
 	font-family: Inter, sans-serif;
 	font-weight: 400;
-	line-height: 26px;
+	line-height: 1.625rem; /* Adjusted line height to 26px equivalent */
 	margin: 0;
-	min-height: 52px; /* Ensure consistent height */
-  }
+	min-height: 3.25rem; /* Ensure consistent height */
+}
 
 .image-row {
-    display: flex;
-    justify-content: center; /* Center the images horizontally */
-    margin-bottom: 20px; /* Add margin for spacing */
-	margin-top: 15px;
-	gap: 50px;
-  }
+	display: flex;
+	justify-content: center; /* Center the images horizontally */
+	margin-bottom: 1.25rem; /* Adjusted margin to 20px equivalent */
+	margin-top: 0.9375rem; /* Adjusted margin to 15px equivalent */
+	gap: 3.125rem; /* Adjusted gap to 50px equivalent */
+}
 
 .image-row img {
-  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
-  cursor: pointer; /* Add cursor pointer */
+	transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+	cursor: pointer; /* Add cursor pointer */
 }
 
 .image-row img:hover {
-  transform: scale(1.1); /* Scale up the image on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+	transform: scale(1.1); /* Scale up the image on hover */
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
 }
 
 

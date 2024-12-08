@@ -17,40 +17,34 @@ body {
 /*Header*/
 header {
 	width: 100%;
-	height: 100px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	height: 4.375rem; /* Adjusted height to rem */
+	padding-bottom: 0.25rem;
 	background: linear-gradient(0deg, #4c9ed7 0%, #034a7c 100%);
 	justify-content: flex-start;
 	align-items: center;
 	display: inline-flex;
-  z-index: 1000;
-  position: sticky;
-	top: 0;
-  transition: background-color 0.4s ease-in-out;
+	background-attachment: fixed;
 }
 
 header a {
 	color: white;
 	text-decoration: none;
-	padding: 8px 16px;
-  font-weight: 500; 
-  font-size: 18px; 
-  transition: color 0.3s, background-color 0.3s; 
+	padding: 0.25rem 0.5rem; /* Adjusted padding to rem */
+	font-weight: 500;
+	font-size: 1rem; /* Adjusted font size to rem */
+	transition: color 0.3s, background-color 0.3s;
 }
 
 header a img {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
+  width: 1rem; /* Adjusted size to rem */
+  height: 1rem; /* Adjusted size to rem */
+  margin-right: 0.3125rem; /* Adjusted margin to rem */
   vertical-align: middle; 
   transition: transform 0.3s; 
 }
 
 header a i {
-  margin-right: 5px;
+  margin-right: 0.3125rem; /* Adjusted margin to rem */
   vertical-align: middle;
   transition: transform 0.3s; 
 }
@@ -65,7 +59,7 @@ header a:hover img {
 
 header a:hover {
   color: #4c9ed7; 
-  border-bottom: 2px solid #4c9ed7; 
+  border-bottom: 0.125rem solid #4c9ed7; /* Adjusted border to rem */
 }
 
 header.scrolled {
@@ -82,7 +76,7 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-right: 20px; 
+  margin-right: 1.25rem; /* Adjusted margin to rem */
 }
 
 header nav ul li:last-child {
@@ -90,10 +84,9 @@ header nav ul li:last-child {
 }
 
 header .logo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+	width: 3.75rem; /* Adjusted size to rem */
+	height: 3.75rem; /* Adjusted size to rem */
+	margin-right: 0.625rem; /* Adjusted margin to rem */
 }
 
 header .logo-placeholder img {
@@ -104,19 +97,18 @@ header .logo-placeholder img {
 
 /*Logo*/
 .logo-placeholder {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem; /* 100px to rem */
+  height: 6.25rem; /* 100px to rem */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  padding-left: 10px;
+  font-size: 0.875rem; /* 14px to rem */
+  padding-left: 0.625rem; /* 10px to rem */
   color: #4c9ed7;
-  margin-right: 10px;
+  margin-right: 0.625rem; /* 10px to rem */
   overflow: hidden; /* Add this line */
   border-radius: 50%; /* Optional: Add this line to make the logo circular */
 }
-
 .logo-placeholder img {
   width: 100%;
   height: 100%;
@@ -128,28 +120,40 @@ header .logo-placeholder img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 79px); 
-  background-color: #f0f0f0;
+  height: 35rem; 
+  background: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/03/league-of-legends-key-art-no-logo.jpg') no-repeat center center; /* Add background image */
+  background-size: cover; /* Ensure the background image covers the entire section */
   text-align: center;
 }
 
 .home-content {
-  max-width: 600px;
+  background: rgba(0, 0, 0, 0.263);
+
+  font-size: 1rem;
+
+   padding: 1.25rem; /* Add padding */
+
+    border-radius: 0.625rem; /* Add border radius */
 }
 
 .home h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1.25rem; /* 20px to rem */
+  color: #C8AA6E; 
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
 }
 
 .home p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.125rem; /* 18px to rem */
+  margin-bottom: 1.25rem; /* 20px to rem */
+  color: white; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
 }
 
 .home .btn {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0.625rem 1.25rem; /* 10px 20px to rem */
+  font-size: 1rem; /* 16px to rem */
   background-color: #4c9ed7;
   color: white;
   border: none;
@@ -163,16 +167,16 @@ header .logo-placeholder img {
 /*SpanSelector*/
 .Span, .SpanSelected {
   align-self: stretch;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 12px;
-  padding-right: 11.19px;
+  padding-top: 0.3125rem; /* 5px to rem */
+  padding-bottom: 0.3125rem; /* 5px to rem */
+  padding-left: 0.75rem; /* 12px to rem */
+  padding-right: 0.7rem; /* 11.19px to rem */
   opacity: 0.70;
   background: #1C3162;
-  border-radius: 5px;
+  border-radius: 0.3125rem; /* 5px to rem */
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 0.25rem; /* 4px to rem */
   display: inline-flex;
   transition: background-color 0.3s, opacity 0.3s;
   cursor: pointer; 
@@ -195,77 +199,50 @@ header .logo-placeholder img {
   position: relative;
 }
 
-/*Role Buttons*/
-.AllRoles {
-  color: white; 
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-
-.Baron, .Jungle, .Mid, .Duo, .Support {
-  color: white;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-
-.DivSelector {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px; 
-}
-
 /*Champion Grid*/
 #champion-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  padding: 20px; 
-  background-color: #f9f9f9; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr)); /* 150px to rem */
+  gap: 1.25rem; /* 20px to rem */
+  padding: 1.25rem; /* 20px to rem */
+  background-color: #0a142886; 
+  border-radius: 0.625rem; /* 10px to rem */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 4px 8px to rem */
 }
 
 .champion-card {
   text-align: center;
   background: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  padding: 0.625rem; /* 10px to rem */
+  border: 0.0625rem solid #ccc; /* 1px to rem */
+  border-radius: 0.625rem; /* 10px to rem */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .champion-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3125rem); /* -5px to rem */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 0 8px 16px to rem */
 }
 
 .champion-card img {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem; /* 100px to rem */
+  height: 6.25rem; /* 100px to rem */
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px to rem */
 }
 
 .champion-card p {
-  font-size: 16px;
+  font-size: 1rem; /* 16px to rem */
   font-weight: 600;
   color: #333;
 }
 
 .champion-name {
-  font-size: 16px;
+  font-size: 1rem; /* 16px to rem */
   font-weight: bold;
   color: #333;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.625rem; /* 10px to rem */
 }
 
 .champion-card a {
@@ -332,54 +309,27 @@ header .logo-placeholder img {
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 0.625rem; /* 10px to rem */
+  margin: 1.25rem 0; /* 20px to rem */
 }
 
 .pagination-button {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.5rem 1rem; /* 8px 16px to rem */
+  font-size: 0.875rem; /* 14px to rem */
+  border: 0.0625rem solid #ccc; /* 1px to rem */
+  border-radius: 0.25rem; /* 4px to rem */
   background-color: white;
   cursor: pointer;
 }
 
 .pagination-button.active {
-  background-color: #007bff;
+  background-color: #034a7c;
   color: white;
-  border-color: #007bff;
+  border-color: #034a7c;
 }
 
 .pagination-button:hover {
-  background-color: #0056b3;
-  color: white;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.pagination-button {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.pagination-button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.pagination-button:hover {
-  background-color: #0056b3;
+  background-color: #4c9ed7;
   color: white;
 }
 
@@ -417,8 +367,8 @@ header .logo-placeholder img {
 }
 
 #loading-circle {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border: 5px solid rgba(255, 255, 255, 0.3);
   border-top: 5px solid white;
   border-radius: 50%;
@@ -436,4 +386,453 @@ header .logo-placeholder img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #034a7c;
+	color: white;
+}
+
+.section-container {
+	position: relative;
+	padding: 40px 20px; /* Add more padding to the top */
+	background-color: transparent; /* Make background transparent */
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    height: 70vh;
+}
+
+/* General Styles */
+.dark-theme {
+  background: #0A1428;
+  color: white;
+}
+
+.champion-container {
+  width: 100%;
+  max-width: 1278px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background-color: #0A1428; /* Add background color */
+}
+
+.champion-content {
+  max-width: 1182px;
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Header Section */
+.champion-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the header */
+  text-align: center; /* Center align the text */
+}
+
+.champion-title {
+  font-size: 32px;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #C8AA6E; /* Change color to white */
+}
+
+.champion-name {
+  font-size: 72px;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white; /* Change color to white */
+}
+
+.champion-description {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  line-height: 26px;
+  max-width: 1148px;
+  color: white; /* Change color to white */
+}
+
+/* Meta Section */
+.meta-container {
+  display: flex;
+  gap: 16px;
+}
+
+.meta-box {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #C8AA6E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.difficulty-icon{
+  width: 32px;
+  height: 32px;
+}
+
+.role-icon{
+  width: 32px;
+  height: 32px;
+}
+
+.role-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 4px;
+}
+
+.meta-description {
+  text-align: center;
+}
+
+.meta-title {
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  color: #C8AA6E; /* Change color to match the theme */
+}
+
+.meta-value {
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  color: white; /* Change color to white */
+}
+
+#champion-image {
+  width: 100%;
+  height: 400px;
+  background-size: cover; /* Change from contain to cover */
+  background-position: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  position: relative;
+  padding: 20px; /* Add padding */
+  margin: 20px 0; /* Add margin */
+}
+
+#champion-details-container {
+  display: flex;
+  gap: 40px;
+  background-color: #0A1428;
+}
+
+.champion-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5), /* Add inner shadow effect */
+              0 -10px 20px rgba(0, 0, 0, 0.5); /* Add shadow on top */
+  border-radius: 10px;
+}
+
+.champion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dark-theme {
+	color: white;
+	background: #0A1428;
+	padding-left: 0;
+	width: 100%;
+	max-width: 1278px;
+	height: 100vh;
+	background: #0A1428;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+/* Header container styling */
+.header-container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center the content vertically */
+	align-items: center; /* Center the content horizontally */
+}
+
+/* Text styles */
+.header-title {
+    max-width: 600px;
+	font-size: 20px; /* Make the text smaller */
+	margin-bottom: 20px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: center; /* Center the text */
+}
+
+.header-subtitle {
+    max-width: 800px;
+	font-size: 4rem;
+	margin-bottom: 10px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center; /* Center the text */
+}
+
+.header-subtitle-1 {
+    font-size:3.6rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #fff;
+    text-align: center; /* Center the text */
+}
+
+.header-description {
+	max-width: 800px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center; /* Center the text */
+}
+
+.header-description-1 {
+    margin-bottom: 20px;
+    max-width: 750px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center; /* Center the text */
+}
+
+.next-slide {
+	background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ffe8f50201af51a0956875d2aeeb9e662eb0b228-3840x2160.png?auto=format&amp;fit=fill&amp;q=80&amp;w=1895'); /* Add background image */
+	background-size: cover;
+	background-position: center;
+	height: 120vh; /* Adjust height to ensure it is displayed fully */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Content container */
+.content-container {
+	width: 100%;
+	max-width: 1182px;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	align-items: center;
+	gap: 24px;
+    align-items: center; /* Center the items horizontally */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Text container */
+  .text-container {
+	text-align: center;
+  }
+  
+  .section-title {
+	font-size: 64px;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 72px;
+	margin: 0;
+  }
+  
+  .section-description {
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 16px 0 0;
+	max-width: 575px;
+	text-align: center;
+  }
+  
+  /* Icon tab */
+  .icon-tab {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+	gap:10px;
+    justify-content: center; /* Center the labels horizontally */
+    margin-bottom: 5px; /* Add margin for spacing */
+  }
+  
+  .icon-tab-label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin: 0 5px; /* Add margin between labels */
+    transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
+    cursor: pointer; /* Add cursor pointer */
+  }
+  
+  .icon-tab-label img {
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  }
+  
+  .icon-tab-label:hover {
+    transform: scale(1.1); /* Scale up the label on hover */
+    color: #4c9ed7; /* Change text color on hover */
+  }
+  
+  .icon-tab-label:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  }
+  
+  .label-text {
+	font-size: 14px;
+	padding-top: 10px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 22px;
+  }
+  
+  /* Nexus visual */
+  .nexus-visual {
+	max-width: 550px;
+	width: 100%;
+	height: 100%;
+	margin-top: -80px;
+  }
+
+  .nexus-container {
+	height: 100%;
+  }
+  
+  /* Media content */
+  .media-content {
+	text-align: center;
+	max-width: 575px;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+  
+  .media-title {
+	font-size: 24px;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 32px;
+	margin: 0 0 8px;
+	min-height: 32px; /* Ensure consistent height */
+  }
+  
+  .media-description {
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 0;
+	min-height: 52px; /* Ensure consistent height */
+  }
+
+.image-row {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    margin-bottom: 20px; /* Add margin for spacing */
+	margin-top: 15px;
+	gap: 50px;
+  }
+
+.image-row img {
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.image-row img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 4rem;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 4.5rem;
+  margin: 0;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 1rem 0 0;
+  max-width: 35.9375rem;
+  text-align: center;
+}
+
+/* Media Titles */
+.media-title {
+  font-size: 1.5rem;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 2rem;
+  margin: 0 0 0.5rem;
+  min-height: 2rem;
+}
+
+.media-description {
+  font-size: 1.125rem;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0;
+  min-height: 3.25rem;
+}
+
+/* Champions Section */
+#champions {
+  padding: 2rem 1rem; /* Add padding */
+  background-color: #0a1428; /* Add background color */
+  text-align: center;
+}
+
+#champions h2 {
+  font-size: 2.5rem; /* Adjust font size */
+  color: #C8AA6E; /* Add color */
+  margin-bottom: 1.5rem; /* Add margin */
+  padding-left: 2rem;
 }
