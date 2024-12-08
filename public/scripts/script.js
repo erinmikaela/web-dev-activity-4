@@ -97,3 +97,19 @@ function loadChampionDetails(championKey) {
   // Fetch and display champion details
   // This function should be implemented to fetch the details and update the #champion-details section
 }
+
+			document.getElementById("enemy-nexus").addEventListener("click", () => {
+				document.getElementById("media-title").textContent = "ENEMY NEXUS";
+				document.getElementById("media-description").textContent =
+					"Located in the enemy team's base, the enemy Nexus is just like yours. Destroying the enemy Nexus wins your team the game.";
+				document.getElementById("nexus-visual").src =
+					"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/5bf342fa15ae8a7cc0eda852fdb0361c5d7dcbbf-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+			});
+
+			document.getElementById("your-nexus").addEventListener("click", () => {
+				document.getElementById("media-title").textContent = "YOUR NEXUS";
+				document.getElementById("media-description").textContent =
+					"Your Nexus is where minions spawn. Behind your Nexus is the Fountain, where you can quickly replenish health and mana and access the Shop.";
+				document.getElementById("nexus-visual").src =
+					"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d79ab89872173d65758e134c07ef0645f7a0e504-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+			});
