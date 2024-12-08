@@ -131,3 +131,59 @@ document.getElementById("turrets").addEventListener("click", () => {
 	document.getElementById("nexus-visual-clear-path").src =
 		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/351bb454c18a5f55dc1d47ba5674e246bfaa171b-3288x2100.png?auto=format&fit=fill&q=80&w=851";
 });
+
+document.getElementById("baron-nashor").addEventListener("click", () => {
+	document.getElementById("media-title-take-on-jungle").textContent = "BARON NASHOR";
+	document.getElementById("media-description-take-on-jungle").textContent =
+		"Baron Nashor is the most powerful monster in the jungle. Killing Baron grants the slayer's team bonus attack damage, ability power, empowered recall, and greatly increases the power of nearby minions.";
+	document.getElementById("nexus-visual-take-on-jungle").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ed4bef5c2369044d76cf535e038b6c1f8d323f13-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("drakes").addEventListener("click", () => {
+	document.getElementById("media-title-take-on-jungle").textContent = "DRAKES";
+	document.getElementById("media-description-take-on-jungle").textContent =
+		"Drakes, or dragons, are powerful monsters that grant unique bonuses depending on the element of the drake your team slays. There are five Elemental Drakes and one Elder Dragon.";
+	document.getElementById("nexus-visual-take-on-jungle").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1faaf44ebe07ec29900a21db0810b130f4777342-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("top-lane").addEventListener("click", () => {
+	document.getElementById("media-title-choose-your-lane").textContent = "TOP LANE";
+	document.getElementById("media-description-choose-your-lane").textContent =
+		"Champions in top lane are the tough solo fighters of the team. It's their job to protect their lane and focus on the enemy team's most powerful members.";
+	document.getElementById("nexus-visual-choose-your-lane").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/fc8d0c8c803a8e91a1912df9054b3be90211a2d9-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("jungle").addEventListener("click", () => {
+	document.getElementById("media-title-choose-your-lane").textContent = "JUNGLE";
+	document.getElementById("media-description-choose-your-lane").textContent =
+		"Junglers live for the hunt. Stalking between lanes with stealth and skill, they keep a close eye on the most important neutral monsters and pounce the moment an opponent lets their guard down.";
+	document.getElementById("nexus-visual-choose-your-lane").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/eb84be329ef915096e908527267852ff26845bba-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("mid-lane").addEventListener("click", () => {
+	document.getElementById("media-title-choose-your-lane").textContent = "MID LANE";
+	document.getElementById("media-description-choose-your-lane").textContent =
+		"Mid laners are your high burst damage champions who can do it all—solo and as a team. For them, combat is a dangerous dance where they're always looking for an opportunity to outplay their opponent.";
+	document.getElementById("nexus-visual-choose-your-lane").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/245d81d16cb5fef638753ce7d83e137a4d2aaca7-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("bot-lane").addEventListener("click", () => {
+	document.getElementById("media-title-choose-your-lane").textContent = "BOT LANE";
+	document.getElementById("media-description-choose-your-lane").textContent =
+		"Bot lane champions are the dynamite of the team. As precious cargo, they need to be protected early on before amassing enough gold and experience to carry the team to victory.";
+	document.getElementById("nexus-visual-choose-your-lane").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/87489b0e450b3fa59e176a3189c61c8eb9092c78-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
+
+document.getElementById("support").addEventListener("click", () => {
+	document.getElementById("media-title-choose-your-lane").textContent = "SUPPORT";
+	document.getElementById("media-description-choose-your-lane").textContent =
+		"Support champions are team guardians. They help keep teammates alive and primarily focus on setting up kills, protecting their teammate in bot lane until they become stronger.";
+	document.getElementById("nexus-visual-choose-your-lane").src =
+		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ee41cd027bf8af85bebc07c8480b1304b793fc1e-3288x2100.png?auto=format&fit=fill&q=80&w=851";
+});
