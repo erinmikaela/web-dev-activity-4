@@ -127,10 +127,8 @@ header .logo-placeholder img {
 }
 
 .home-content {
-  background: rgba(0, 0, 0, 0.263);
-
+  background: rgba(0, 0, 0, 0.546);
   font-size: 1rem;
-
    padding: 1.25rem; /* Add padding */
 
     border-radius: 0.625rem; /* Add border radius */
@@ -652,7 +650,6 @@ footer {
 	padding-left: 0;
 	align-items: center;
 	gap: 24px;
-    align-items: center; /* Center the items horizontally */
     text-align: center; /* Center the text */
   }
   

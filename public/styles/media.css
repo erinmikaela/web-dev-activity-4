@@ -1,181 +1,319 @@
 @media (max-width: 1200px) {
   .home h1 {
-    font-size: 2.5rem; /* Adjusted font size for large screens */
+    font-size: 2.5rem;
   }
 
   .home p {
-    font-size: 1rem; /* Adjusted font size for large screens */
+    font-size: 1rem;
   }
 
   .home .btn {
-    padding: 0.625rem 1.25rem; /* Adjusted padding for large screens */
-    font-size: 1rem; /* Adjusted font size for large screens */
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
   }
 
   .section-title {
-    font-size: 3rem; /* Adjusted font size for large screens */
+    font-size: 3rem;
   }
 
   .section-description {
-    font-size: 1rem; /* Adjusted font size for large screens */
+    font-size: 1rem;
   }
 
   .media-title {
-    font-size: 1.5rem; /* Adjusted font size for large screens */
+    font-size: 1.5rem;
   }
 
   .media-description {
-    font-size: 1rem; /* Adjusted font size for large screens */
+    font-size: 1rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 5rem;
   }
 }
 
 @media (max-width: 992px) {
   .home h1 {
-    font-size: 2rem; /* Adjusted font size for medium screens */
+    font-size: 2rem;
   }
 
   .home p {
-    font-size: 0.875rem; /* Adjusted font size for medium screens */
+    font-size: 0.875rem;
   }
 
   .home .btn {
-    padding: 0.5rem 1rem; /* Adjusted padding for medium screens */
-    font-size: 0.875rem; /* Adjusted font size for medium screens */
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 
   .section-title {
-    font-size: 2.5rem; /* Adjusted font size for medium screens */
+    font-size: 2.5rem;
   }
 
   .section-description {
-    font-size: 0.875rem; /* Adjusted font size for medium screens */
+    font-size: 0.875rem;
   }
 
   .media-title {
-    font-size: 1.25rem; /* Adjusted font size for medium screens */
+    font-size: 1.25rem;
   }
 
   .media-description {
-    font-size: 0.875rem; /* Adjusted font size for medium screens */
+    font-size: 0.875rem;
+  }
+
+  .header-title {
+    font-size: 1.75rem;
+  }
+
+  .header-subtitle {
+    font-size: 4.5rem;
+  }
+
+  .header-description {
+    font-size: 1.125rem;
   }
 }
 
 @media (max-width: 768px) {
   .home h1 {
-    font-size: 1.5rem; /* Adjusted font size for small screens */
+    font-size: 1.5rem;
   }
 
   .home p {
-    font-size: 0.75rem; /* Adjusted font size for small screens */
+    font-size: 0.75rem;
+    text-align: center; /* Ensure centered text */
+    line-height: 1.5; /* Improve readability */
   }
 
   .home .btn {
-    padding: 0.375rem 0.75rem; /* Adjusted padding for small screens */
-    font-size: 0.75rem; /* Adjusted font size for small screens */
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
   }
 
   .section-title {
-    font-size: 2rem; /* Adjusted font size for small screens */
+    font-size: 2rem;
   }
 
   .section-description {
-    font-size: 0.75rem; /* Adjusted font size for small screens */
+    font-size: 0.75rem;
+    text-align: justify; /* Enhance layout for smaller screens */
   }
 
   .media-title {
-    font-size: 1rem; /* Adjusted font size for small screens */
+    font-size: 1rem;
   }
 
   .media-description {
-    font-size: 0.75rem; /* Adjusted font size for small screens */
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 
   .card {
-    font-size: 0.875rem; /* Adjusted font size for small screens */
-    padding: 0.625rem; /* Adjusted padding for small screens */
+    font-size: 0.875rem;
+    padding: 0.625rem;
   }
 
   .spacer {
-    margin-top: 10rem;
+    margin-top: 6rem; /* Reduce spacer size */
+  }
+
+  header {
+    height: 60px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 3.5rem; /* Scale down the subtitle */
+  }
+
+  .header-description {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem; /* Add padding for better alignment */
+  }
+
+  .next-slide {
+    margin-top: -2rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+  .champion-details-container {
+    flex-direction: column;
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 425px) {
   .home h1 {
-    font-size: 1.25rem; /* Adjusted font size for extra small screens */
+    font-size: 1.25rem;
+    text-align: center;
   }
 
   .home p {
-    font-size: 0.625rem; /* Adjusted font size for extra small screens */
+    font-size: 0.625rem;
+    text-align: justify;
+    padding: 0 1rem; /* Add padding to prevent text from sticking to edges */
   }
 
   .home .btn {
-    padding: 0.25rem 0.5rem; /* Adjusted padding for extra small screens */
-    font-size: 0.625rem; /* Adjusted font size for extra small screens */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
   }
 
   .section-title {
-    font-size: 1.5rem; /* Adjusted font size for extra small screens */
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .section-description {
-    font-size: 0.625rem; /* Adjusted font size for extra small screens */
+    font-size: 0.625rem;
+    text-align: justify;
+    line-height: 1.4;
+    padding: 0 1rem;
   }
 
   .media-title {
-    font-size: 0.875rem; /* Adjusted font size for extra small screens */
+    font-size: 0.875rem;
+    text-align: center;
   }
 
   .media-description {
-    font-size: 0.625rem; /* Adjusted font size for extra small screens */
+    font-size: 0.625rem;
+    text-align: justify;
+    padding: 0 1rem;
   }
 
   .header-title {
-    font-size: 1rem; /* Adjusted font size for extra small screens */
+    font-size: 1rem;
+    text-align: center;
   }
 
   .header-subtitle {
-    font-size: 2rem; /* Adjusted font size for extra small screens */
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 0.5rem; /* Add padding for consistency */
   }
 
   .header-description {
-    font-size: 0.875rem; /* Adjusted font size for extra small screens */
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0 1rem;
   }
 
   .header-subtitle-1 {
-    font-size: 1.8rem; /* Adjusted font size for extra small screens */
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .header-description-1 {
-    font-size: 0.875rem; /* Adjusted font size for extra small screens */
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.4;
   }
 
   .icon-tab-label img {
-    width: 2.5rem; /* Adjusted size for extra small screens */
-    height: 2.5rem; /* Adjusted size for extra small screens */
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .label-text {
-    font-size: 0.75rem; /* Adjusted font size for extra small screens */
+    font-size: 0.75rem;
+    text-align: center;
   }
 
   .nexus-visual {
-    max-width: 20rem; /* Adjusted max width for extra small screens */
+    max-width: 18rem; /* Further reduce size for smaller screens */
+    margin: 0 auto;
   }
 
   .media-title {
-    font-size: 1rem; /* Adjusted font size for extra small screens */
+    font-size: 1rem;
+    text-align: center;
   }
 
   .media-description {
-    font-size: 0.75rem; /* Adjusted font size for extra small screens */
+    font-size: 0.75rem;
+    text-align: justify;
+    padding: 0 1rem;
   }
 
   .section-title {
-    font-size: 2rem; /* Adjusted font size for extra small screens */
+    font-size: 2rem;
+    text-align: center;
   }
 
   .section-description {
-    font-size: 0.875rem; /* Adjusted font size for extra small screens */
+    font-size: 0.875rem;
+    text-align: justify;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+}
+
+/* New Breakpoint: Extra Small Devices (Below 375px) */
+@media (max-width: 375px) {
+  .home h1 {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .home p {
+    font-size: 0.5rem;
+    padding: 0 0.5rem;
+    text-align: justify;
+  }
+
+  .home .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .section-description {
+    font-size: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .header-title {
+    font-size: 0.875rem;
+  }
+
+  .header-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .header-description {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .nexus-visual {
+    max-width: 15rem;
+  }
+
+  .icon-tab-label img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .label-text {
+    font-size: 0.625rem;
   }
 }
