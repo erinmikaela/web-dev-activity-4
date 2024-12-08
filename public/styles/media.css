@@ -154,6 +154,54 @@
     max-width: 100%;
     overflow: hidden;
   }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: #034a7c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .hamburger-links.active {
+    display: flex;
+  }
+
+  .hamburger-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .hamburger-links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .hamburger-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .hamburger-links a:hover {
+    color: #4c9ed7;
+  }
 }
 
 @media (max-width: 425px) {

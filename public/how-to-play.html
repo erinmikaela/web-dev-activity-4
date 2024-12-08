@@ -24,19 +24,34 @@
 				<img src="../assets/icons/brand-logo.svg" alt="Brand Logo" />
 			</div>
 			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="how-to-play.html">How to Play</a></li>
-					<li>
-						<a
-							href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA.."
-						>
-							Runeterra Map
-							<i class="fas fa-map-marker-alt"></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
+					<ul class="nav-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="how-to-play.html">How to Play</a></li>
+						<li>
+							<a
+								href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA.."
+							>
+								Runeterra Map
+								<i class="fas fa-map-marker-alt"></i>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="hamburger-menu">
+					<i class="fas fa-bars"></i>
+					<ul class="hamburger-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="how-to-play.html">How to Play</a></li>
+						<li>
+							<a
+								href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA.."
+							>
+								Runeterra Map
+								<i class="fas fa-map-marker-alt"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
 		</header>
 		<!--Main Content-->
 		<main>
@@ -280,5 +295,14 @@
 		</footer>
 		<!--Scripts-->
 		<script src="scripts/mapElementInteractions.js"></script>
+		<script>
+			document.querySelector('.hamburger-menu').addEventListener('click', () => {
+				document.querySelector('.nav-links').classList.toggle('active');
+				document.querySelector('.hamburger-links').classList.toggle('active');
+				if (document.querySelector('.hamburger-links').classList.contains('active')) {
+					document.querySelector('.nav-links').classList.remove('active');
+				}
+			});
+		</script>
 	</body>
 </html>
