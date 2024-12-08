@@ -187,15 +187,3 @@ document.getElementById("support").addEventListener("click", () => {
 	document.getElementById("nexus-visual-choose-your-lane").src =
 		"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ee41cd027bf8af85bebc07c8480b1304b793fc1e-3288x2100.png?auto=format&fit=fill&q=80&w=851";
 });
-
-function showLoadingScreen() {
-	document.getElementById("loading-screen").style.display = "flex";
-}
-
-function hideLoadingScreen() {
-	document.getElementById("loading-screen").style.display = "none";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-	hideLoadingScreen();
-});
