@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>League of Legends Universe</title>
+		<link rel="stylesheet" href="./styles/how-to-play.css" />
+		<!-- Add Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Add Google Fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+		/>
+	</head>
+	<body>
+			<!--Video loading screen-->
+		<div id="loading-screen">
+			<video autoplay muted loop id="loading-video">
+				<source src="../assets/loading-screen.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+			<div id="loading-overlay">
+				<div id="loading-circle"></div>
+				<div id="loading-text">Loading...</div>
+			</div>
+		</div>
+		<!--Nav bar-->
+		<header>
+			<div class="logo-placeholder">
+				<img src="../assets/icons/brand-logo.svg" alt="Brand Logo" />
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="test.html">Champions</a></li>
+					<li><a href="how-to-play.html">How to Play</a></li>
+					<li>
+						<a
+							href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA.."
+						>
+							Runeterra Map
+							<i class="fas fa-map-marker-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!--Main Content-->
+		<main>
+			<div class="section-container">
+				<div class="header-container">
+					<div class="header-title">WELCOME TO THE RIFT</div>
+					<div class="header-subtitle">LEARN THE BASICS</div>
+					<div class="header-description">
+						There's a lot to learn about League, so we'll start with the
+						essentials. Explore the guide below to get the rundown on the most
+						popular game mode.
+					</div>
+				</div>
+			</div>
+			<div class="next-slide"></div>
+			<section
+				class="section-container"
+				style="
+					height: 110vh;
+					padding: 0 0;
+					align-items: center;
+					text-align: center;
+					display: flex;
+				"
+			>
+				<div class="video-container">
+					<video autoplay muted loop playsinline class="video-bg">
+						<source
+							src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/4e93ce961e97e3b09785aee6a5c3f9a62ce3a3ab.webm"
+							type="video/webm"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div class="header-container">
+						<h1 class="header-subtitle-1">WHAT IS LEAGUE OF LEGENDS?</h1>
+						<p class="header-description-1">
+							League of Legends is a team-based strategy game where two teams of
+							five powerful champions face off to destroy the other's base.
+							Choose from over 140 champions to make epic plays, secure kills,
+							and take down towers as you battle your way to victory.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="section-container dark-theme">
+				<div class="content-container">
+					<div class="text-container">
+						<h1 class="section-title">DESTROY THE BASE</h1>
+						<p class="section-description">
+							The Nexus is the heart of both teams' bases. Destroy the enemy's
+							Nexus first to win the game.
+						</p>
+						<div class="image-row">
+							<div class="icon-tab">
+								<div class="icon-tab-label" id="your-nexus">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/3f70356e890d0f5858fe9851f6f4de859223bf89-980x980.png?auto=format&fit=crop&q=80&h=72&w=72&crop=center"
+										alt="Your Nexus Icon"
+									/>
+									<span class="label-text">YOUR NEXUS</span>
+								</div>
+								<div class="icon-tab-label" id="enemy-nexus">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/de5aec44fcea11a5320062399ff53b45bd76d060-980x980.png?auto=format&fit=crop&q=80&h=72&w=72&crop=center"
+										alt="Enemy Nexus Icon"
+									/>
+									<span class="label-text">ENEMY NEXUS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nexus-container">
+						<img
+							src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d79ab89872173d65758e134c07ef0645f7a0e504-3288x2100.png?auto=format&fit=fill&q=80&w=851"
+							alt="Nexus Visual"
+							class="nexus-visual"
+							id="nexus-visual"
+						/>
+						<div class="media-content">
+							<h2 class="media-title" id="media-title">YOUR NEXUS</h2>
+							<p class="media-description" id="media-description">
+								Your Nexus is where minions spawn. Behind your Nexus is the
+								Fountain, where you can quickly replenish health and mana and
+								access the Shop.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section class="section-container dark-theme">
+				<div class="content-container">
+					<div class="text-container">
+						<h1 class="section-title">CLEAR THE PATH</h1>
+						<p class="section-description">
+							Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path are defense structures called turrets and inhibitors. Each lane has three turrets and one inhibitor, and each Nexus is guarded by two turrets.
+						</p>
+						<div class="image-row">
+							<div class="icon-tab">
+								<div class="icon-tab-label" id="turrets">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/c955eecea79c17e8f5bcd5b4108e22dc674ad389-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Turrets"
+									/>
+									<span class="label-text">TURRETS</span>
+								</div>
+								<div class="icon-tab-label" id="inhibitors">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d173c3455cefd58b2a5817d9f75653935eff1393-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Inhibitors"
+									/>
+									<span class="label-text">INHIBITORS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nexus-container">
+						<img
+							src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/351bb454c18a5f55dc1d47ba5674e246bfaa171b-3288x2100.png?auto=format&fit=fill&q=80&w=851"
+							alt="Nexus Visual"
+							class="nexus-visual"
+							id="nexus-visual-clear-path"
+						/>
+						<div class="media-content">
+							<h2 class="media-title" id="media-title-clear-path">TURRETS</h2>
+							<p class="media-description" id="media-description-clear-path">
+								Turrets deal damage to enemy minions and champions, and provide limited vision from the Fog of War for their team. Attack these structures with minions ahead of you to avoid damage and charge ahead.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section class="section-container dark-theme">
+				<div class="content-container">
+					<div class="text-container">
+						<h1 class="section-title">TAKE ON THE JUNGLE</h1>
+						<p class="section-description">
+							In between the lanes is the jungle, where neutral monsters and jungle plants reside. The two most important monsters are Baron Nashor and the Drakes. Killing these units grants unique buffs for your team and can also turn the tide of the game.
+						</p>
+						<div class="image-row">
+							<div class="icon-tab">
+								<div class="icon-tab-label" id="baron-nashor">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/c5aa9d0609c03b92ebb854c29537f9d5b9afe49f-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Baron Nashor"
+									/>
+									<span class="label-text">baron Nashor</span>
+								</div>
+								<div class="icon-tab-label" id="drakes">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/dd3af4418ea63af03ad11d0c065f66a282a3cd7d-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Drakes"
+									/>
+									<span class="label-text">DRAKES</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nexus-container">
+						<img
+							src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ed4bef5c2369044d76cf535e038b6c1f8d323f13-3288x2100.png?auto=format&fit=fill&q=80&w=851"
+							alt="Nexus Visual"
+							class="nexus-visual"
+							id="nexus-visual-take-on-jungle"
+						/>
+						<div class="media-content">
+							<h2 class="media-title" id="media-title-take-on-jungle">BARON NASHOR</h2>
+							<p class="media-description" id="media-description-take-on-jungle">
+								Baron Nashor is the most powerful monster in the jungle. Killing Baron grants the slayer's team bonus attack damage, ability power, empowered recall, and greatly increases the power of nearby minions.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section class="section-container dark-theme">
+				<div class="content-container">
+					<div class="text-container">
+						<h1 class="section-title">CHOOSE YOUR LANE</h1>
+						<p class="section-description">
+							There are five positions that make up the recommended team comp for the game. Each lane lends itself to certain kinds of champions and roles—try them all or lock in to the lane that calls you.
+						</p>
+						<div class="image-row">
+							<div class="icon-tab">
+								<div class="icon-tab-label" id="top-lane">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/8dac0c1318083c411c90f5f94feec17e84cb052b-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Top Lane"
+									/>
+									<span class="label-text">TOP LANE</span>
+								</div>
+								<div class="icon-tab-label" id="jungle">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/fa03a69b7c666230ae6945b83078e8a26027403a-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Jungle"
+									/>
+									<span class="label-text">JUNGLE</span>
+								</div>
+                                <div class="icon-tab-label" id="mid-lane">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/62fcfeb7dcbb737f0cdaceb554daf4237f2c234a-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Mid Lane"
+									/>
+									<span class="label-text">MID LANE</span>
+								</div>
+                                <div class="icon-tab-label" id="bot-lane">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1059c2aebd67b535ce1348fa0b72b453a46f6b5e-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Bot Lane"
+									/>
+									<span class="label-text">BOT LANE</span>
+								</div>
+                                <div class="icon-tab-label" id="support">
+									<img
+										src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d5dc4ba9080bf3c361e061afa69c9563aa38f5f9-980x980.png?auto=format&fit=crop&q=80&h=96&w=96&crop=center"
+										alt="Support"
+									/>
+									<span class="label-text">SUPPORT</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nexus-container">
+						<img
+							src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/fc8d0c8c803a8e91a1912df9054b3be90211a2d9-3288x2100.png?auto=format&fit=fill&q=80&w=851"
+							alt="Nexus Visual"
+							class="nexus-visual"
+							id="nexus-visual-choose-your-lane"
+						/>
+						<div class="media-content">
+							<h2 class="media-title" id="media-title-choose-your-lane">TOP LANE</h2>
+							<p class="media-description" id="media-description-choose-your-lane">
+								Champions in top lane are the tough solo fighters of the team. It's their job to protect their lane and focus on the enemy team's most powerful members.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!--Footer-->
+		<footer>
+			<p>&copy; 2024 League of Legends Universe. All Rights Reserved.</p>
+		</footer>
+		<!--Scripts-->
+		<script src="./scripts/script.js"></script>
+	</body>
+</html>

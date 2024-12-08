@@ -1,59 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>League of Legends Wiki</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <!-- Add SweetAlert2 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-</head>
-<body>
-  <header>
-    <h1>League of Legends Wiki Fandom</h1>
-    <p>A community-driven League of Legends champion database</p>
-  </header>
-  <main>
-    <div class="DivSelector">
-      <div class="SpanSelected">
-        <div class="AllRoles" id="all-roles">All Roles</div>
-      </div>
-      <div class="Span">
-        <img class="Img" src="assets/icons/baron.png" />
-        <div class="Baron" id="baron-role">Baron</div>
-      </div>
-      <div class="Span">
-        <img class="Img" src="assets/icons/jungle.png" />
-        <div class="Jungle" id="jungle-role">Jungle</div>
-      </div>
-      <div class="Span">
-        <img class="Img" src="assets/icons/mid.png" />
-        <div class="Mid" id="mid-role">Mid</div>
-      </div>
-      <div class="Span">
-        <img class="Img" src="assets/icons/duo.png" />
-        <div class="Duo" id="duo-role">Duo</div>
-      </div>
-      <div class="Span">
-        <img class="Img" src="assets/icons/support.png" />
-        <div class="Support" id="support-role">Support</div>
-      </div>
-    </div>
-  </div>
-</section>
-    <section id="champions">
-      <h2>Champions</h2>
-      <div id="champion-grid"></div>
-      <!-- Pagination controls -->
-      <div id="pagination-controls" class="pagination"></div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 League of Legends Fandom</p>
-  </footer>
-  <script type="module" src="scripts/fetchChampions.js"></script>
-  <!-- Add SweetAlert2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="module" src="scripts/championDetailsHandler.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>League of Legends Universe</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- Add SweetAlert2 CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+		/>
+		<!-- Add Google Fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+		/>
+		<!-- Add Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<!--Video loading screen-->
+		<div id="loading-screen">
+			<video autoplay muted loop id="loading-video">
+				<source src="assets/loading-screen.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+			<div id="loading-overlay">
+				<div id="loading-circle"></div>
+				<div id="loading-text">Loading...</div>
+			</div>
+		</div>
+		<!--Nav Bar-->
+		<header>
+			<div class="logo-placeholder">
+				<img src="assets/icons/brand-logo.svg" alt="Brand Logo" />
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="test.html">Champions</a></li>
+					<li><a href="how-to-play.html">How to Play</a></li>
+					<li>
+						<a
+							href="https://map.leagueoflegends.com/?_gl=1*c0h9ut*_gcl_au*MTM5NjM5Mjc1My4xNzMzNTkzMTY1*_ga*MTMxOTM5NDU0OC4xNzMzNDY0NTUx*_ga_FXBJE5DEDD*MTczMzU5MzE2OC4xLjEuMTczMzU5MzY0NC4wLjAuMA.."
+						>
+							Runeterra Map
+							<i class="fas fa-map-marker-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!--Main Content-->
+		<main>
+			<section class="home" id="home">
+				<div class="home-content">
+					<h1>League of Legends Universe</h1>
+					<p>
+						Welcome to the League of Legends Universe! Explore the world of
+						Runeterra and its champions.
+					</p>
+					<div class="DivSelector">
+						<div class="SpanSelected">
+							<div class="AllRoles" id="all-roles">All Roles</div>
+						</div>
+						<div class="Span">
+							<img class="Img" src="assets/icons/baron.png" />
+							<div class="Baron" id="baron-role">Baron</div>
+						</div>
+						<div class="Span">
+							<img class="Img" src="assets/icons/jungle.png" />
+							<div class="Jungle" id="jungle-role">Jungle</div>
+						</div>
+						<div class="Span">
+							<img class="Img" src="assets/icons/mid.png" />
+							<div class="Mid" id="mid-role">Mid</div>
+						</div>
+						<div class="Span">
+							<img class="Img" src="assets/icons/duo.png" />
+							<div class="Duo" id="duo-role">Duo</div>
+						</div>
+						<div class="Span">
+							<img class="Img" src="assets/icons/support.png" />
+							<div class="Support" id="support-role">Support</div>
+						</div>
+					</div>
+				</div>
+			</section>
+      <!--Champions Section-->
+			<section id="champions">
+				<h2>Champions</h2>
+				<div id="champion-grid"></div>
+				<!-- Pagination controls -->
+				<div id="pagination-controls" class="pagination"></div>
+			</section>
+		</main>
+    <!--Footer-->
+		<footer>
+			<p>&copy; 2024 League of Legends Universe. All Rights Reserved.</p>
+		</footer>
+    <!--Scripts-->
+    <script src="scripts/script.js"></script>
+		<script type="module" src="scripts/fetchChampions.js"></script>
+		<script type="module" src="scripts/championDetailsHandler.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</body>
 </html>

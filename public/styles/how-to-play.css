@@ -1,0 +1,379 @@
+/*how to play.html*/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	/*border: red 1px solid;*/
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	padding: 8px 4px;
+	background: linear-gradient(0deg, #4c9ed7 0%, #034a7c 100%);
+	justify-content: flex-start;
+	align-items: center;
+	display: inline-flex;
+	z-index: 1000;
+	position: sticky;
+	top: 0;
+	transition: background-color 0.4s ease-in-out;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+	padding: 8px 16px;
+	font-weight: 500;
+	font-size: 18px;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+header a img {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: middle;
+	transition: transform 0.3s;
+}
+
+header a i {
+	margin-right: 5px;
+	vertical-align: middle;
+	transition: transform 0.3s;
+}
+
+header a:hover i {
+	transform: scale(1.2);
+}
+
+header a:hover img {
+	color: #4c9ed7;
+}
+
+header a:hover {
+	color: #4c9ed7;
+	border-bottom: 2px solid #4c9ed7;
+}
+
+header.scrolled {
+	background: linear-gradient(0deg, #4c9ed7 0%, #034a7cbe 100%);
+	opacity: 0.9;
+	transition: background-color 0.4s ease-in-out;
+}
+
+header nav ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul li {
+	margin-right: 20px;
+}
+
+header nav ul li:last-child {
+	margin-right: 0;
+}
+
+.logo-placeholder {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #4c9ed7;
+	margin-right: 10px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.logo-placeholder img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+header .logo-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+}
+
+header .logo-placeholder img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* General container styling */
+.section-container {
+	position: relative;
+	padding: 40px 20px; /* Add more padding to the top */
+	background-color: transparent; /* Make background transparent */
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    height: 70vh;
+}
+
+.dark-theme {
+	color: white;
+	background: #0A1428;
+	padding-left: 0;
+	width: 100%;
+	max-width: 1278px;
+	height: 100vh;
+	background: #0A1428;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+/* Header container styling */
+.header-container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center the content vertically */
+	align-items: center; /* Center the content horizontally */
+}
+
+/* Text styles */
+.header-title {
+    max-width: 600px;
+	font-size: 20px; /* Make the text smaller */
+	margin-bottom: 20px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: center; /* Center the text */
+}
+
+.header-subtitle {
+    max-width: 800px;
+	font-size: 4rem;
+	margin-bottom: 10px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center; /* Center the text */
+}
+
+.header-subtitle-1 {
+    font-size:3.6rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #fff;
+    text-align: center; /* Center the text */
+}
+
+.header-description {
+	max-width: 800px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #0a1428;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center; /* Center the text */
+}
+
+.header-description-1 {
+    margin-bottom: 20px;
+    max-width: 750px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center; /* Center the text */
+}
+
+.next-slide {
+	background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/ffe8f50201af51a0956875d2aeeb9e662eb0b228-3840x2160.png?auto=format&amp;fit=fill&amp;q=80&amp;w=1895'); /* Add background image */
+	background-size: cover;
+	background-position: center;
+	height: 120vh; /* Adjust height to ensure it is displayed fully */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  z-index: -1; 
+  filter: brightness(50%); /* Add shadow effect */
+  pointer-events: none;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 0;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #034a7c;
+	color: white;
+}
+
+/* Content container */
+.content-container {
+	width: 100%;
+	max-width: 1182px;
+	height: 60vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding-left: 0;
+	align-items: center;
+	gap: 24px;
+    align-items: center; /* Center the items horizontally */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Text container */
+  .text-container {
+	text-align: center;
+  }
+  
+  .section-title {
+	font-size: 64px;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 72px;
+	margin: 0;
+  }
+  
+  .section-description {
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 16px 0 0;
+	max-width: 575px;
+	text-align: center;
+  }
+  
+  /* Icon tab */
+  .icon-tab {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+	gap:10px;
+    justify-content: center; /* Center the labels horizontally */
+    margin-bottom: 5px; /* Add margin for spacing */
+  }
+  
+  .icon-tab-label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin: 0 5px; /* Add margin between labels */
+    transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
+    cursor: pointer; /* Add cursor pointer */
+  }
+  
+  .icon-tab-label img {
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  }
+  
+  .icon-tab-label:hover {
+    transform: scale(1.1); /* Scale up the label on hover */
+    color: #4c9ed7; /* Change text color on hover */
+  }
+  
+  .icon-tab-label:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  }
+  
+  .label-text {
+	font-size: 14px;
+	padding-top: 10px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 22px;
+  }
+  
+  /* Nexus visual */
+  .nexus-visual {
+	max-width: 550px;
+	width: 100%;
+	height: 100%;
+	margin-top: -80px;
+  }
+
+  .nexus-container {
+	height: 100%;
+  }
+  
+  /* Media content */
+  .media-content {
+	text-align: center;
+	max-width: 575px;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+  
+  .media-title {
+	font-size: 24px;
+	font-family: Inter, sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 32px;
+	margin: 0 0 8px;
+	min-height: 32px; /* Ensure consistent height */
+  }
+  
+  .media-description {
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 0;
+	min-height: 52px; /* Ensure consistent height */
+  }
+
+.image-row {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    margin-bottom: 20px; /* Add margin for spacing */
+	margin-top: 15px;
+	gap: 50px;
+  }
+
+.image-row img {
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.image-row img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+

@@ -21,6 +21,7 @@ async function loadChampions() {
   const paginationControls = document.getElementById("pagination-controls");
 
   try {
+    showLoadingScreen();
     // Fetch champions using the proxy route
     const response = await fetch("/api/champions");
     const champions = await response.json();
@@ -44,6 +45,8 @@ async function loadChampions() {
   } catch (error) {
     console.error("Error loading champions:", error);
     championGrid.innerHTML = `<p>Failed to load champions. Please try again later.</p>`;
+  } finally {
+    hideLoadingScreen();
   }
 }
 
