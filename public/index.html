@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>League of Legends Wiki</title>
   <link rel="stylesheet" href="styles/style.css">
-  <!-- Add SweetAlert2 CSS -->
+  <!-- SweetAlert2 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
@@ -14,46 +14,51 @@
     <p>A community-driven League of Legends champion database</p>
   </header>
   <main>
+    <!-- Selector for Roles -->
     <div class="DivSelector">
       <div class="SpanSelected">
         <div class="AllRoles" id="all-roles">All Roles</div>
       </div>
       <div class="Span">
-        <img class="Img" src="assets/icons/baron.png" />
+        <img class="Img" src="assets/icons/baron.png" alt="Baron Icon">
         <div class="Baron" id="baron-role">Baron</div>
       </div>
       <div class="Span">
-        <img class="Img" src="assets/icons/jungle.png" />
+        <img class="Img" src="assets/icons/jungle.png" alt="Jungle Icon">
         <div class="Jungle" id="jungle-role">Jungle</div>
       </div>
       <div class="Span">
-        <img class="Img" src="assets/icons/mid.png" />
+        <img class="Img" src="assets/icons/mid.png" alt="Mid Icon">
         <div class="Mid" id="mid-role">Mid</div>
       </div>
       <div class="Span">
-        <img class="Img" src="assets/icons/duo.png" />
+        <img class="Img" src="assets/icons/duo.png" alt="Duo Icon">
         <div class="Duo" id="duo-role">Duo</div>
       </div>
       <div class="Span">
-        <img class="Img" src="assets/icons/support.png" />
+        <img class="Img" src="assets/icons/support.png" alt="Support Icon">
         <div class="Support" id="support-role">Support</div>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Champions Section -->
     <section id="champions">
       <h2>Champions</h2>
-      <div id="champion-grid"></div>
+      <div id="champion-grid">
+        <!-- Champion cards will be dynamically populated here -->
+      </div>
       <!-- Pagination controls -->
-      <div id="pagination-controls" class="pagination"></div>
+      <div id="pagination-controls" class="pagination">
+        <!-- Pagination buttons will be dynamically populated here -->
+      </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 League of Legends Fandom</p>
+    <p>&copy; 2024 League of Legends Fandom. All rights reserved.</p>
   </footer>
-  <script type="module" src="scripts/fetchChampions.js"></script>
-  <!-- Add SweetAlert2 JS -->
+  <!-- External JavaScript Files -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="scripts/fetchChampions.js"></script>
   <script type="module" src="scripts/championDetailsHandler.js"></script>
 </body>
 </html>
