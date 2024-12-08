@@ -36,7 +36,6 @@ async function loadChampionDetails(championKey, container) {
   }
 
   try {
-    showLoadingScreen();
     const details = await getChampionDetails(championKey);
 
     if (!details) {
@@ -72,7 +71,5 @@ async function loadChampionDetails(championKey, container) {
   } catch (error) {
     console.error(`Error fetching champion details for ${championKey}:`, error);
     container.innerHTML = '<p>Failed to fetch champion details. Please try again later.</p>';
-  } finally {
-    hideLoadingScreen();
   }
 }
