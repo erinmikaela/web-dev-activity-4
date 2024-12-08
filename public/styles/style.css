@@ -84,6 +84,7 @@ header nav ul li:last-child {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  padding-left: 10px;
   color: #4c9ed7;
   margin-right: 10px;
   overflow: hidden; /* Add this line */
@@ -374,22 +375,4 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-.hidden {
-  display: none;
-}
 
-#champion-details {
-  display: none;
-}
-
-#champion-details.active {
-  display: block;
-}
-
-#champion-details {
-  display: none;
-}
-
-#champion-details.active {
-  display: block;
-}

@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const championsLink = document.querySelector('a[href="#champions"]');
+  championsLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("champions").classList.remove("hidden");
+  });
+
   const championGrid = document.getElementById("champion-grid");
 
   if (championGrid) {
