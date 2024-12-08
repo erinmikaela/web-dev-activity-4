@@ -91,3 +91,89 @@ main {
   height: 100%; /* Ensure content stays within the modal */
   overflow-y: auto; /* Enable scrolling */
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.Span, .SpanSelected {
+  align-self: stretch;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 11.19px;
+  opacity: 0.70;
+  background: #1C3162;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
+  transition: background-color 0.3s, opacity 0.3s; /* Add this line */
+  cursor: pointer; /* Add this line */
+}
+
+.SpanSelected{
+  opacity: 1;
+  background: #034a7c;
+}
+
+.Span:hover, .SpanSelected:hover {
+  background-color: #4c9ed7; /* Add this line */
+  opacity: 1; /* Add this line */
+}
+
+.Img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.AllRoles {
+  color: white; /* Change this line */
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.Baron, .Jungle, .Mid, .Duo, .Support {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.DivSelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px; /* Add some margin to separate from the button */
+}
